@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  opiniauto-db:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=opiniauto
+    volumes:
+      - opiniauto_pg_data:/bitnami/postgresql
+
+volumes:
+  opiniauto_pg_data:
