@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Perfil {
+  USER
+  ADMIN
+}
+
+enum StatusCarro {
+  ATIVO
+  INATIVO
+}
+
+model Usuario {
+  id            String         @id @default(cuid())
+  nome          String
+  email         String         @unique
+  senhaHash     String
+  perfil        Perfil         @default(USER)
+  criadoEm      DateTime       @default(now())
+  avaliacao     Avaliacao[]
+  refreshTokens RefreshToken[]
+  loginLogs     LoginLog[]
+}
+
+model Carro {
+  id              String      @id @default(cuid())
+  marca           String
+  modelo          String
+  ano             Int
+  categoria       String
+  tipoMotorizacao String
+  status          StatusCarro @default(ATIVO)
+  imagem          String
+  criadoEm        DateTime    @default(now())
+  avaliacao       Avaliacao[]
+}
+
+model Avaliacao {
+  id                 String   @id @default(cuid())
+  notaDesempenho     Int
+  notaConforto       Int
+  notaConsumo        Int
+  notaDesign         Int
+  notaCustoBeneficio Int
+  notaFinal          Float
+  comentario         String?
+  criadoEm           DateTime @default(now())
+
+  usuarioId String
+  carroId   String
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  carro   Carro   @relation(fields: [carroId], references: [id], onDelete: Cascade)
+
+  @@unique([usuarioId, carroId])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  usuarioId String
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model LoginLog {
+  id        String   @id @default(uuid())
+  usuarioId String?
+  email     String
+  ip        String
+  userAgent String?
+  sucesso   Boolean
+  createdAt DateTime @default(now())
+  usuario   Usuario? @relation(fields: [usuarioId], references: [id])
+}
