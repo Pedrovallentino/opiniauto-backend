@@ -1,3 +1,14 @@
+/**
+ * @module CarsRoutes
+ * @description Rotas para gerenciamento de carros.
+ * Contém rotas públicas para listagem e detalhes, e rotas administrativas protegidas
+ * para operações de criação, atualização e remoção.
+ * 
+ * @requires fastify
+ * @requires fastify-type-provider-zod
+ * @requires zod
+ */
+
 import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
@@ -12,6 +23,24 @@ import { deleteCar } from "../controllers/cars/delete";
 import { getDetails } from "../controllers/cars/get-details";
 import { getMetrics } from "../controllers/cars/get-metrics";
 
+/**
+ * @function carsRoutes
+ * @description Plugin de rotas de carros.
+ * 
+ * Rotas Públicas:
+ * - GET /cars: Lista carros ativos.
+ * - GET /cars/:id: Detalhes de um carro.
+ * - GET /cars/:id/metrics: Métricas de avaliação de um carro.
+ * 
+ * Rotas Administrativas (Requer JWT + Role ADMIN):
+ * - GET /cars/all: Lista todos os carros (incluindo inativos).
+ * - POST /cars: Cria um novo carro.
+ * - PUT /cars/:id: Atualiza dados de um carro.
+ * - PATCH /cars/:id/status: Alterna status (ATIVO/INATIVO).
+ * - DELETE /cars/:id: Remove um carro.
+ * 
+ * @param {FastifyInstance} app - Instância do servidor Fastify.
+ */
 export async function carsRoutes(app: FastifyInstance) {
   // Public routes
   app.withTypeProvider<ZodTypeProvider>().get("/cars", {

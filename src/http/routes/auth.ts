@@ -1,3 +1,13 @@
+/**
+ * @module AuthRoutes
+ * @description Definição das rotas de autenticação e gestão de usuários.
+ * Utiliza Zod para validação de esquemas (body e response).
+ * 
+ * @requires fastify - Instância e tipos.
+ * @requires fastify-type-provider-zod - Tipagem e validação.
+ * @requires zod - Definição de esquemas.
+ */
+
 import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
@@ -5,7 +15,19 @@ import { register } from "../controllers/auth/register";
 import { authenticate } from "../controllers/auth/authenticate";
 import { refresh } from "../controllers/auth/refresh";
 
+/**
+ * @function authRoutes
+ * @description Plugin de rotas de autenticação.
+ * 
+ * Rotas:
+ * - POST /users: Cadastro de novos usuários (Público).
+ * - POST /sessions: Autenticação de usuários (Login) (Público).
+ * - PATCH /token/refresh: Atualização do token de acesso via refresh token (Público).
+ * 
+ * @param {FastifyInstance} app - Instância do servidor Fastify.
+ */
 export async function authRoutes(app: FastifyInstance) {
+  // Rota de Cadastro de Usuário
   app.withTypeProvider<ZodTypeProvider>().post("/users", {
     schema: {
       tags: ["Auth"],
@@ -22,6 +44,7 @@ export async function authRoutes(app: FastifyInstance) {
     },
   }, register);
 
+  // Rota de Login (Autenticação)
   app.withTypeProvider<ZodTypeProvider>().post("/sessions", {
     schema: {
       tags: ["Auth"],
@@ -44,6 +67,7 @@ export async function authRoutes(app: FastifyInstance) {
     },
   }, authenticate);
 
+  // Rota de Refresh Token
   app.withTypeProvider<ZodTypeProvider>().patch("/token/refresh", {
     schema: {
       tags: ["Auth"],

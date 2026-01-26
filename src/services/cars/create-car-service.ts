@@ -1,3 +1,10 @@
+/**
+ * @module CreateCarService
+ * @description Serviço para criação de novos carros no sistema.
+ * 
+ * @requires CarRepository - Interface de persistência.
+ */
+
 import { CarRepository } from '../../repositories/car-repository'
 
 interface CreateCarServiceRequest {
@@ -9,9 +16,20 @@ interface CreateCarServiceRequest {
   imagem: string
 }
 
+/**
+ * @class CreateCarService
+ * @description Executa a lógica de criação de um carro.
+ */
 export class CreateCarService {
   constructor(private readonly cars: CarRepository) {}
 
+  /**
+   * @method execute
+   * @description Cria um novo registro de carro.
+   * 
+   * @param {CreateCarServiceRequest} params - Dados do carro.
+   * @returns {Promise<{ car: Car }>} O carro criado.
+   */
   async execute({
     marca,
     modelo,

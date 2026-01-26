@@ -1,3 +1,12 @@
+/**
+ * @module AuthenticateController
+ * @description Controlador responsável por gerenciar a requisição de login.
+ * Orquestra a validação da entrada, chamada ao serviço de autenticação e resposta HTTP.
+ * 
+ * @requires fastify
+ * @requires zod
+ */
+
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
 import { AuthenticateUserService } from "@/services/auth/authenticate-user-service";
@@ -5,6 +14,21 @@ import { PrismaUserRepository } from "@/repositories/prisma/prisma-user-reposito
 import { PrismaAuthRepository } from "@/repositories/prisma/prisma-auth-repository";
 import { InvalidCredentialsError } from "@/services/errors";
 
+/**
+ * @function authenticate
+ * @description Manipulador da rota de login (POST /sessions).
+ * 
+ * Fluxo:
+ * 1. Valida o corpo da requisição (email, senha).
+ * 2. Instancia repositórios e serviço.
+ * 3. Executa a autenticação.
+ * 4. Gera o token JWT (Access Token).
+ * 5. Define o Refresh Token em um cookie seguro (HttpOnly).
+ * 6. Retorna o token e dados do usuário.
+ * 
+ * @param {FastifyRequest} request - Requisição HTTP.
+ * @param {FastifyReply} reply - Resposta HTTP.
+ */
 export async function authenticate(
   request: FastifyRequest,
   reply: FastifyReply

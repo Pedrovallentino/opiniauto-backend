@@ -1,3 +1,12 @@
+/**
+ * @module AuthenticateUserService
+ * @description Serviço responsável pela autenticação de usuários (Login).
+ * Valida credenciais, gera tokens JWT e registra logs de tentativa de login.
+ * 
+ * @requires bcryptjs - Comparação de hash de senha.
+ * @requires node:crypto - Geração de UUID para refresh token.
+ */
+
 import bcrypt from 'bcryptjs'
 import { randomUUID } from 'node:crypto'
 import { UserRepository } from '../../repositories/user-repository'
@@ -21,12 +30,31 @@ interface AuthenticateUserResponse {
   refreshToken: string
 }
 
+/**
+ * @class AuthenticateUserService
+ * @description Executa a lógica de negócio para autenticação.
+ */
 export class AuthenticateUserService {
   constructor(
     private userRepository: UserRepository,
     private authRepository: AuthRepository
   ) {}
 
+  /**
+   * @method execute
+   * @description Realiza o login do usuário.
+   * 
+   * Passos:
+   * 1. Busca usuário pelo e-mail.
+   * 2. Compara a senha fornecida com o hash salvo.
+   * 3. Se inválido, registra log de falha e lança erro.
+   * 4. Se válido, gera Refresh Token.
+   * 5. Salva Refresh Token e registra log de sucesso.
+   * 
+   * @param {AuthenticateUserRequest} params - Credenciais e metadados de acesso.
+   * @returns {Promise<AuthenticateUserResponse>} Dados do usuário e Refresh Token.
+   * @throws {InvalidCredentialsError} Se credenciais forem inválidas.
+   */
   async execute({ email, senha, ip, userAgent }: AuthenticateUserRequest): Promise<AuthenticateUserResponse> {
     const user = await this.userRepository.findByEmail(email)
 
