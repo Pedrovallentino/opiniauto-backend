@@ -13,6 +13,10 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { env } from './config/env'
+import { authRoutes } from './http/routes/auth'
+import { passwordRecoveryRoutes } from './http/routes/password-recovery'
+import { carsRoutes } from './http/routes/cars'
+import { evaluationsRoutes } from './http/routes/evaluations'
 
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>()
