@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { PrismaAuthRepository } from "@/repositories/prisma/prisma-auth-repository";
+import { PrismaAuthRepository } from "@/repositories/prisma/prisma-auth-repository.js";
 
 export async function refresh(request: FastifyRequest, reply: FastifyReply) {
   const refreshToken = request.cookies.refreshToken;

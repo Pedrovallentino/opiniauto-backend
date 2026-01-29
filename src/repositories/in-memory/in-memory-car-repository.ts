@@ -1,5 +1,5 @@
-import { Car } from '../../domain/entities'
-import { CarRepository, CreateCarData, UpdateCarData } from '../car-repository'
+import { Car } from '../../domain/entities.js'
+import { CarRepository, CreateCarData, UpdateCarData } from '../car-repository.js'
 import { randomUUID } from 'node:crypto'
 
 export class InMemoryCarRepository implements CarRepository {

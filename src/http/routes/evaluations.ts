@@ -1,11 +1,11 @@
 import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
-import { verifyJwt } from "../middlewares/verify-jwt";
-import { create } from "../controllers/evaluations/create";
-import { update } from "../controllers/evaluations/update";
-import { deleteEvaluation } from "../controllers/evaluations/delete";
-import { listByCar } from "../controllers/evaluations/list-by-car";
+import { verifyJwt } from "../middlewares/verify-jwt.js";
+import { create } from "../controllers/evaluations/create.js";
+import { update } from "../controllers/evaluations/update.js";
+import { deleteEvaluation } from "../controllers/evaluations/delete.js";
+import { listByCar } from "../controllers/evaluations/list-by-car.js";
 
 export async function evaluationsRoutes(app: FastifyInstance) {
   // Public routes

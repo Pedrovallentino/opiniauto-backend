@@ -1,7 +1,7 @@
-import { EvaluationRepository } from "@/repositories/evaluation-repository";
-import { CarRepository } from "@/repositories/car-repository";
-import { Evaluation } from "@/domain/entities";
-import { ResourceNotFoundError, ActionNotAllowedError, ConflictError } from "../errors";
+import { EvaluationRepository } from "@/repositories/evaluation-repository.js";
+import { CarRepository } from "@/repositories/car-repository.js";
+import { Evaluation } from "@/domain/entities.js";
+import { ResourceNotFoundError, ActionNotAllowedError, ConflictError } from "../errors.js";
 
 interface CreateEvaluationServiceRequest {
   userId: string;

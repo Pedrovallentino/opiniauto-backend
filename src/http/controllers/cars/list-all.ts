@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { ListAllCarsService } from "@/services/cars/list-all-cars-service";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
+import { ListAllCarsService } from "@/services/cars/list-all-cars-service.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
 
 /**
  * Lists all cars, including inactive ones.

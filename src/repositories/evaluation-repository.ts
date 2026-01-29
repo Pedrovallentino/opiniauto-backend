@@ -1,4 +1,4 @@
-import { Evaluation } from '../domain/entities'
+import { Evaluation } from '../domain/entities.js'
 
 export interface CreateEvaluationData {
   userId: string

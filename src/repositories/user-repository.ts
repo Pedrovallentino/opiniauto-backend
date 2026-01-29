@@ -1,4 +1,4 @@
-import { User } from '../domain/entities'
+import { User } from '../domain/entities.js'
 
 export interface CreateUserData {
   nome: string

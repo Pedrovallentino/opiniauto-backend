@@ -11,9 +11,9 @@
 import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
-import { register } from "../controllers/auth/register";
-import { authenticate } from "../controllers/auth/authenticate";
-import { refresh } from "../controllers/auth/refresh";
+import { register } from "../controllers/auth/register.js";
+import { authenticate } from "../controllers/auth/authenticate.js";
+import { refresh } from "../controllers/auth/refresh.js";
 
 /**
  * @function authRoutes

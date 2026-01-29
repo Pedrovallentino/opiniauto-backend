@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository'
-import { UpdateEvaluationService } from './update-evaluation-service'
-import { ResourceNotFoundError, ActionNotAllowedError } from '../errors'
+import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository.js'
+import { UpdateEvaluationService } from './update-evaluation-service.js'
+import { ResourceNotFoundError, ActionNotAllowedError } from '../errors.js'
 
 describe('Update Evaluation Service', () => {
   it('should be able to update an evaluation', async () => {

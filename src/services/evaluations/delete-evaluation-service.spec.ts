@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository'
-import { DeleteEvaluationService } from './delete-evaluation-service'
-import { ResourceNotFoundError, ActionNotAllowedError } from '../errors'
+import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository.js'
+import { DeleteEvaluationService } from './delete-evaluation-service.js'
+import { ResourceNotFoundError, ActionNotAllowedError } from '../errors.js'
 
 describe('Delete Evaluation Service', () => {
   it('should be able to delete an evaluation', async () => {

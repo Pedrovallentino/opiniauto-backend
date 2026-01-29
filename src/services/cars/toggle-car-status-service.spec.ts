@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository'
-import { ToggleCarStatusService } from './toggle-car-status-service'
-import { ResourceNotFoundError } from '../errors'
+import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository.js'
+import { ToggleCarStatusService } from './toggle-car-status-service.js'
+import { ResourceNotFoundError } from '../errors.js'
 
 describe('Toggle Car Status Service', () => {
   it('should be able to toggle car status', async () => {

@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { CreateCarService } from "@/services/cars/create-car-service";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
-import { ConflictError } from "@/services/errors";
+import { CreateCarService } from "@/services/cars/create-car-service.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
+import { ConflictError } from "@/services/errors.js";
 
 /**
  * Creates a new car.

@@ -12,16 +12,16 @@
 import { FastifyInstance } from "fastify";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 import { z } from "zod";
-import { verifyJwt } from "../middlewares/verify-jwt";
-import { verifyUserRole } from "../middlewares/verify-role";
-import { create } from "../controllers/cars/create";
-import { update } from "../controllers/cars/update";
-import { toggleStatus } from "../controllers/cars/toggle-status";
-import { listActive } from "../controllers/cars/list-active";
-import { listAll } from "../controllers/cars/list-all";
-import { deleteCar } from "../controllers/cars/delete";
-import { getDetails } from "../controllers/cars/get-details";
-import { getMetrics } from "../controllers/cars/get-metrics";
+import { verifyJwt } from "../middlewares/verify-jwt.js";
+import { verifyUserRole } from "../middlewares/verify-role.js";
+import { create } from "../controllers/cars/create.js";
+import { update } from "../controllers/cars/update.js";
+import { toggleStatus } from "../controllers/cars/toggle-status.js";
+import { listActive } from "../controllers/cars/list-active.js";
+import { listAll } from "../controllers/cars/list-all.js";
+import { deleteCar } from "../controllers/cars/delete.js";
+import { getDetails } from "../controllers/cars/get-details.js";
+import { getMetrics } from "../controllers/cars/get-metrics.js";
 
 /**
  * @function carsRoutes

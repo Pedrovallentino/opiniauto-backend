@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { ToggleCarStatusService } from "@/services/cars/toggle-car-status-service";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
-import { ResourceNotFoundError } from "@/services/errors";
+import { ToggleCarStatusService } from "@/services/cars/toggle-car-status-service.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
+import { ResourceNotFoundError } from "@/services/errors.js";
 
 /**
  * Toggles a car's status (ATIVO/INATIVO).

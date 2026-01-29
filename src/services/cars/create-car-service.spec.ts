@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository'
-import { CreateCarService } from './create-car-service'
+import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository.js'
+import { CreateCarService } from './create-car-service.js'
 
 describe('Create Car Service', () => {
   it('should be able to create a new car', async () => {

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository'
-import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository'
-import { CreateEvaluationService } from './create-evaluation-service'
-import { ResourceNotFoundError, ConflictError } from '../errors'
+import { InMemoryEvaluationRepository } from '../../repositories/in-memory/in-memory-evaluation-repository.js'
+import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository.js'
+import { CreateEvaluationService } from './create-evaluation-service.js'
+import { ResourceNotFoundError, ConflictError } from '../errors.js'
 
 describe('Create Evaluation Service', () => {
   it('should be able to create an evaluation', async () => {

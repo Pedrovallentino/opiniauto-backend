@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { UpdateEvaluationService } from "@/services/evaluations/update-evaluation-service";
-import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository";
-import { ResourceNotFoundError, ActionNotAllowedError } from "@/services/errors";
+import { UpdateEvaluationService } from "@/services/evaluations/update-evaluation-service.js";
+import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository.js";
+import { ResourceNotFoundError, ActionNotAllowedError } from "@/services/errors.js";
 
 export async function update(request: FastifyRequest, reply: FastifyReply) {
   const updateEvaluationParamsSchema = z.object({

@@ -1,4 +1,4 @@
-import { Car } from '../domain/entities'
+import { Car } from '../domain/entities.js'
 
 export interface CreateCarData {
   marca: string

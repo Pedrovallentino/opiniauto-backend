@@ -6,8 +6,8 @@
  * @implements CarRepository
  */
 
-import { prisma } from '../../infra/database/prisma/client'
-import { CarRepository, CreateCarData, UpdateCarData } from '../car-repository'
+import { prisma } from '../../infra/database/prisma/client.js'
+import { CarRepository, CreateCarData, UpdateCarData } from '../car-repository.js'
 
 /**
  * @class PrismaCarRepository

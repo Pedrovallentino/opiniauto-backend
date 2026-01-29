@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryUserRepository } from '../../repositories/in-memory/in-memory-user-repository'
-import { InMemoryAuthRepository } from '../../repositories/in-memory/in-memory-auth-repository'
-import { AuthenticateUserService } from './authenticate-user-service'
-import { InvalidCredentialsError } from '../errors'
+import { InMemoryUserRepository } from '../../repositories/in-memory/in-memory-user-repository.js'
+import { InMemoryAuthRepository } from '../../repositories/in-memory/in-memory-auth-repository.js'
+import { AuthenticateUserService } from './authenticate-user-service.js'
+import { InvalidCredentialsError } from '../errors.js'
 import bcrypt from 'bcryptjs'
 
 describe('Authenticate User Service', () => {

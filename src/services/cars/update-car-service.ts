@@ -1,5 +1,5 @@
-import { CarRepository, UpdateCarData } from '../../repositories/car-repository'
-import { ResourceNotFoundError } from '../errors'
+import { CarRepository, UpdateCarData } from '../../repositories/car-repository.js'
+import { ResourceNotFoundError } from '../errors.js'
 
 interface UpdateCarServiceRequest extends UpdateCarData {
   carId: string

@@ -11,7 +11,7 @@ import { app } from './app.js'
 import { env } from './config/env.js'
 
 /**
- * @function start
+ * @function startz
  * @description Inicializa o servidor e lida com erros críticos de inicialização.
  */
 async function start() {

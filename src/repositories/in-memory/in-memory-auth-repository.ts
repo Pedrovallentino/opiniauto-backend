@@ -4,7 +4,7 @@ import {
   AuthRepository,
   CreateLoginLogData,
   CreateRefreshTokenData,
-} from '../auth-repository'
+} from '../auth-repository.js'
 
 export class InMemoryAuthRepository implements AuthRepository {
   public refreshTokens: RefreshToken[] = []

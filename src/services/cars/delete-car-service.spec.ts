@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository'
-import { DeleteCarService } from './delete-car-service'
-import { ForbiddenError, ResourceNotFoundError } from '../errors'
+import { InMemoryCarRepository } from '../../repositories/in-memory/in-memory-car-repository.js'
+import { DeleteCarService } from './delete-car-service.js'
+import { ForbiddenError, ResourceNotFoundError } from '../errors.js'
 
 describe('Delete Car Service', () => {
   it('should be able to delete a car', async () => {

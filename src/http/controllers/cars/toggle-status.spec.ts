@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest'
-import { app } from '@/app'
+import { app } from '@/app.js'
 
 // Mock the repository
 vi.mock('@/repositories/prisma/prisma-car-repository', () => {

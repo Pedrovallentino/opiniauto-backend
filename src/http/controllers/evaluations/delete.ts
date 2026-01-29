@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { DeleteEvaluationService } from "@/services/evaluations/delete-evaluation-service";
-import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository";
-import { ResourceNotFoundError, ActionNotAllowedError } from "@/services/errors";
+import { DeleteEvaluationService } from "@/services/evaluations/delete-evaluation-service.js";
+import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository.js";
+import { ResourceNotFoundError, ActionNotAllowedError } from "@/services/errors.js";
 
 export async function deleteEvaluation(
   request: FastifyRequest,

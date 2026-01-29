@@ -5,7 +5,7 @@
  * @requires CarRepository - Interface de persistência.
  */
 
-import { CarRepository } from '../../repositories/car-repository'
+import { CarRepository } from '../../repositories/car-repository.js'
 
 interface CreateCarServiceRequest {
   marca: string

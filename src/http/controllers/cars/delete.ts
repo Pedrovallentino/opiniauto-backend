@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { DeleteCarService } from "@/services/cars/delete-car-service";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
-import { ResourceNotFoundError, ForbiddenError } from "@/services/errors";
+import { DeleteCarService } from "@/services/cars/delete-car-service.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
+import { ResourceNotFoundError, ForbiddenError } from "@/services/errors.js";
 
 /**
  * Deletes a car.

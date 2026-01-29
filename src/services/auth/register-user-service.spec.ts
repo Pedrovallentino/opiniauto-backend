@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { InMemoryUserRepository } from '../../repositories/in-memory/in-memory-user-repository'
-import { RegisterUserService } from './register-user-service'
-import { EmailAlreadyUsedError } from '../errors'
+import { InMemoryUserRepository } from '../../repositories/in-memory/in-memory-user-repository.js'
+import { RegisterUserService } from './register-user-service.js'
+import { EmailAlreadyUsedError } from '../errors.js'
 import bcrypt from 'bcryptjs'
 
 describe('Register User Service', () => {

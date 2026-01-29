@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { CreateEvaluationService } from "@/services/evaluations/create-evaluation-service";
-import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
+import { CreateEvaluationService } from "@/services/evaluations/create-evaluation-service.js";
+import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
 import {
   ResourceNotFoundError,
   ActionNotAllowedError,

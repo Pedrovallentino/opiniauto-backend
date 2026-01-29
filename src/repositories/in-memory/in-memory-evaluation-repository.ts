@@ -1,8 +1,8 @@
-import { Evaluation } from '../../domain/entities'
+import { Evaluation } from '../../domain/entities.js'
 import {
   CreateEvaluationData,
   EvaluationRepository,
-} from '../evaluation-repository'
+} from '../evaluation-repository.js'
 import { randomUUID } from 'node:crypto'
 
 export class InMemoryEvaluationRepository implements EvaluationRepository {

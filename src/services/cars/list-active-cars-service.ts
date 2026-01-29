@@ -1,4 +1,4 @@
-import { CarRepository } from '../../repositories/car-repository'
+import { CarRepository } from '../../repositories/car-repository.js'
 
 export class ListActiveCarsService {
   constructor(private readonly cars: CarRepository) {}

@@ -1,5 +1,5 @@
-import { User } from '../../domain/entities'
-import { CreateUserData, UserRepository } from '../user-repository'
+import { User } from '../../domain/entities.js'
+import { CreateUserData, UserRepository } from '../user-repository.js'
 import { randomUUID } from 'node:crypto'
 
 export class InMemoryUserRepository implements UserRepository {

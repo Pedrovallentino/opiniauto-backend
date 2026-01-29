@@ -1,4 +1,4 @@
-import { prisma } from '../../infra/database/prisma/client'
+import { prisma } from '../../infra/database/prisma/client.js'
 import {
   AuthRepository,
   CreateLoginLogData,

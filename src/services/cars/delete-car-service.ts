@@ -1,5 +1,5 @@
-import { CarRepository } from '../../repositories/car-repository'
-import { ForbiddenError, ResourceNotFoundError } from '../errors'
+import { CarRepository } from '../../repositories/car-repository.js'
+import { ForbiddenError, ResourceNotFoundError } from '../errors.js'
 
 interface DeleteCarServiceRequest {
   currentUserPerfil: 'USER' | 'ADMIN'

@@ -9,9 +9,9 @@
 
 import bcrypt from 'bcryptjs'
 import { randomUUID } from 'node:crypto'
-import { UserRepository } from '../../repositories/user-repository'
-import { AuthRepository } from '../../repositories/auth-repository'
-import { InvalidCredentialsError } from '../errors'
+import { UserRepository } from '../../repositories/user-repository.js'
+import { AuthRepository } from '../../repositories/auth-repository.js'
+import { InvalidCredentialsError } from '../errors.js'
 
 interface AuthenticateUserRequest {
   email: string

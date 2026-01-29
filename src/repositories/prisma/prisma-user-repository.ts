@@ -1,5 +1,5 @@
-import { prisma } from '../../infra/database/prisma/client'
-import { CreateUserData, UserRepository } from '../user-repository'
+import { prisma } from '../../infra/database/prisma/client.js'
+import { CreateUserData, UserRepository } from '../user-repository.js'
 
 export class PrismaUserRepository implements UserRepository {
   async create(data: CreateUserData) {

@@ -1,6 +1,6 @@
-import { EvaluationRepository } from "@/repositories/evaluation-repository";
-import { Evaluation } from "@/domain/entities";
-import { ResourceNotFoundError, ActionNotAllowedError } from "../errors";
+import { EvaluationRepository } from "@/repositories/evaluation-repository.js";
+import { Evaluation } from "@/domain/entities.js";
+import { ResourceNotFoundError, ActionNotAllowedError } from "../errors.js";
 
 interface UpdateEvaluationServiceRequest {
   evaluationId: string;

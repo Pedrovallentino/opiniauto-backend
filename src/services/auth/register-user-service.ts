@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs'
-import { UserRepository } from '../../repositories/user-repository'
-import { EmailAlreadyUsedError } from '../errors'
+import { UserRepository } from '../../repositories/user-repository.js'
+import { EmailAlreadyUsedError } from '../errors.js'
 
 interface RegisterUserRequest {
   nome: string

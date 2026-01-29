@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { ListActiveCarsService } from "@/services/cars/list-active-cars-service";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository";
+import { ListActiveCarsService } from "@/services/cars/list-active-cars-service.js";
+import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
 
 /**
  * Lists only cars with 'ATIVO' status.
