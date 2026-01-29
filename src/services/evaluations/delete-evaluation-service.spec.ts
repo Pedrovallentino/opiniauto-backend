@@ -10,7 +10,7 @@ describe('Delete Evaluation Service', () => {
 
     const evaluation = await evaluationRepository.create({
       userId: 'user-1',
-      carroId: 'car-1',
+      carId: 'car-1',
       notaDesempenho: 5,
       notaConforto: 5,
       notaConsumo: 5,
@@ -35,7 +35,7 @@ describe('Delete Evaluation Service', () => {
 
     const evaluation = await evaluationRepository.create({
       userId: 'user-1',
-      carroId: 'car-1',
+      carId: 'car-1',
       notaDesempenho: 5,
       notaConforto: 5,
       notaConsumo: 5,
