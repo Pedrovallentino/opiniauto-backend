@@ -3,7 +3,7 @@ import {
   AuthRepository,
   CreateLoginLogData,
   CreateRefreshTokenData,
-} from '../auth-repository'
+} from '../auth-repository.js'
 
 export class PrismaAuthRepository implements AuthRepository {
   async createRefreshToken(data: CreateRefreshTokenData) {

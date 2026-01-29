@@ -1,6 +1,9 @@
 import { prisma } from '../../infra/database/prisma/client.js'
+import {
+  CreateEvaluationData,
+  EvaluationRepository,
+} from '../evaluation-repository.js'
 import { Evaluation } from '../../domain/entities.js'
-import { EvaluationRepository, CreateEvaluationData, UpdateEvaluationData } from '../evaluation-repository.js'
 
 export class PrismaEvaluationRepository implements EvaluationRepository {
   async create(data: CreateEvaluationData) {

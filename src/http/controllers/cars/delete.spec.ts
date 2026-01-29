@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest'
 import { app } from '../../../app.js'
 
 // Mock the repository
-vi.mock('../../../repositories/prisma/prisma-car-repository.js', () => {
+vi.mock('../../repositories/prisma/prisma-car-repository', () => {
   return {
     PrismaCarRepository: vi.fn().mockImplementation(() => ({
       delete: vi.fn().mockResolvedValue(undefined),
