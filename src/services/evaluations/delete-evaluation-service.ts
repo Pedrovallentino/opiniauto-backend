@@ -1,4 +1,4 @@
-import { EvaluationRepository } from "@/repositories/evaluation-repository.js";
+import { EvaluationRepository } from "../../repositories/evaluation-repository.js";
 import { ResourceNotFoundError, ActionNotAllowedError } from "../errors.js";
 
 interface DeleteEvaluationServiceRequest {

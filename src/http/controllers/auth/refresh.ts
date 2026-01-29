@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { PrismaAuthRepository } from "@/repositories/prisma/prisma-auth-repository.js";
+import { PrismaAuthRepository } from "../../../repositories/prisma/prisma-auth-repository.js";
 
 export async function refresh(request: FastifyRequest, reply: FastifyReply) {
   const refreshToken = request.cookies.refreshToken;
@@ -33,7 +33,7 @@ export async function refresh(request: FastifyRequest, reply: FastifyReply) {
   // Por enquanto, vamos retornar erro 501 Not Implemented ou implementar busca simples
   
   // Vamos implementar busca simples importando PrismaUserRepository
-  const { PrismaUserRepository } = await import("@/repositories/prisma/prisma-user-repository");
+  const { PrismaUserRepository } = await import("../../../repositories/prisma/prisma-user-repository.js");
   const userRepository = new PrismaUserRepository();
   const user = await userRepository.findById(storedToken.usuarioId);
 

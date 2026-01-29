@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { UpdateCarService } from "@/services/cars/update-car-service.js";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
-import { ResourceNotFoundError } from "@/services/errors.js";
+import { UpdateCarService } from "../../../services/cars/update-car-service.js";
+import { PrismaCarRepository } from "../../../repositories/prisma/prisma-car-repository.js";
+import { ResourceNotFoundError } from "../../../services/errors.js";
 
 /**
  * Updates a car's details.

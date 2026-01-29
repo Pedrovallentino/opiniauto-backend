@@ -1,9 +1,9 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { GetCarMetricsService } from "@/services/cars/get-car-metrics-service.js";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
-import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository.js";
-import { ResourceNotFoundError } from "@/services/errors.js";
+import { GetCarMetricsService } from "../../../services/cars/get-car-metrics-service.js";
+import { PrismaCarRepository } from "../../../repositories/prisma/prisma-car-repository.js";
+import { PrismaEvaluationRepository } from "../../../repositories/prisma/prisma-evaluation-repository.js";
+import { ResourceNotFoundError } from "../../../services/errors.js";
 
 export async function getMetrics(request: FastifyRequest, reply: FastifyReply) {
   const getMetricsParamsSchema = z.object({

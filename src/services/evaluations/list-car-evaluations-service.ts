@@ -1,5 +1,5 @@
-import { EvaluationRepository } from "@/repositories/evaluation-repository.js";
-import { Evaluation } from "@/domain/entities.js";
+import { EvaluationRepository } from "../../repositories/evaluation-repository.js";
+import { Evaluation } from "../../domain/entities.js";
 
 interface ListCarEvaluationsServiceRequest {
   carId: string;

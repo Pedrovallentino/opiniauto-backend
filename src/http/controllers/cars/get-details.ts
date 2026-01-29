@@ -1,8 +1,8 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { GetCarDetailsService } from "@/services/cars/get-car-details-service.js";
-import { PrismaCarRepository } from "@/repositories/prisma/prisma-car-repository.js";
-import { ResourceNotFoundError } from "@/services/errors.js";
+import { GetCarDetailsService } from "../../../services/cars/get-car-details-service.js";
+import { PrismaCarRepository } from "../../../repositories/prisma/prisma-car-repository.js";
+import { ResourceNotFoundError } from "../../../services/errors.js";
 
 /**
  * Retrieves details of a specific car by ID.

@@ -1,7 +1,7 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { ListCarEvaluationsService } from "@/services/evaluations/list-car-evaluations-service.js";
-import { PrismaEvaluationRepository } from "@/repositories/prisma/prisma-evaluation-repository.js";
+import { ListCarEvaluationsService } from "../../../services/evaluations/list-car-evaluations-service.js";
+import { PrismaEvaluationRepository } from "../../../repositories/prisma/prisma-evaluation-repository.js";
 
 export async function listByCar(request: FastifyRequest, reply: FastifyReply) {
   const listByCarParamsSchema = z.object({

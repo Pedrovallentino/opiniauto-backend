@@ -9,10 +9,10 @@
 
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
-import { AuthenticateUserService } from "@/services/auth/authenticate-user-service.js";
-import { PrismaUserRepository } from "@/repositories/prisma/prisma-user-repository.js";
-import { PrismaAuthRepository } from "@/repositories/prisma/prisma-auth-repository.js";
-import { InvalidCredentialsError } from "@/services/errors.js";
+import { AuthenticateUserService } from "../../../services/auth/authenticate-user-service.js";
+import { PrismaUserRepository } from "../../../repositories/prisma/prisma-user-repository.js";
+import { PrismaAuthRepository } from "../../../repositories/prisma/prisma-auth-repository.js";
+import { InvalidCredentialsError } from "../../../services/errors.js";
 
 /**
  * @function authenticate

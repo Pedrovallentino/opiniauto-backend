@@ -1,5 +1,5 @@
-import { EvaluationRepository } from "@/repositories/evaluation-repository.js";
-import { CarRepository } from "@/repositories/car-repository.js";
+import { EvaluationRepository } from "../../repositories/evaluation-repository.js";
+import { CarRepository } from "../../repositories/car-repository.js";
 import { ResourceNotFoundError } from "../errors.js";
 
 interface GetCarMetricsServiceRequest {
