@@ -11,9 +11,18 @@ export async function experimentRoutes(app: FastifyInstance) {
 
   app.get('/experiment/version', async () => {
     return {
-      version: '1.0.0',
-      description: 'Versão inicial utilizada nos experimentos do TCC',
+      version: '1.1.0',
+      description: 'Versão atualizada utilizada nos experimentos do TCC',
     }
+  })
+
+  app.get('/experiment/info', async () => {
+  return {
+    application: 'OpiniAuto API',
+    version: '1.1.0',
+    purpose: 'Experimento de atualização da aplicação',
+    status: 'updated',
+   }
   })
 
   app.get('/experiment/ping', async () => {
