@@ -28,6 +28,7 @@ import { authRoutes } from './http/routes/auth.js'
 import { passwordRecoveryRoutes } from './http/routes/password-recovery.js'
 import { carsRoutes } from './http/routes/cars.js'
 import { evaluationsRoutes } from './http/routes/evaluations.js'
+import { experimentRoutes } from './http/routes/experiment.js'
 
 /**
  * @constant app
@@ -87,6 +88,7 @@ app.register(authRoutes)
 app.register(passwordRecoveryRoutes)
 app.register(carsRoutes)
 app.register(evaluationsRoutes)
+app.register(experimentRoutes)
 
 /**
  * @interface FastifyJWT
